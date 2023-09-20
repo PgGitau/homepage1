@@ -913,8 +913,9 @@ a {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    border-radius: 10px;
 
-    height: 430px;
+    height: 400px;
     width: 300px;
     background-position: center;
     background-size: cover;
@@ -925,6 +926,7 @@ a {
   }
 
   .about .icon-boxes .icon-box::after {
+    border-radius: 10px;
     content: '';
     width: 100%;
     height: 100%;
@@ -972,25 +974,81 @@ a {
   
   
   /*--------------------------------------------------------------
-  # Services
+  # How
   --------------------------------------------------------------*/
-  .services .section-title p {
-    font-family: "Raleway", sans-serif;
-  }
-  
-  .services .container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .how-header {
+  .how-container {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    margin-bottom: 1.5rem;
+  }
+
+  .how-icon-box {
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    padding-block: 2rem;
+    position: relative;
+  }
+
+    .how-icon-box::after {
+      content: '';
+      height: 100%;
+      width: 2px;
+      top: 0;
+      left: 50%;
+      background-color: #b08048;
+      position: absolute;
+    }
+
+  .how-icon-box > * {
+    flex-basis: 100%;
+    padding-inline: 2rem;
   }
   
+  .how-icon-box i {
+    font-size: 5rem;
+    float: right;
+    color: #b08048;
+  }
+
+  .how-icon-box i.left {
+    float: left;
+  }
+
+  .how-icon-box span,
+  .how-icon-box h4,
+  .how-icon-box p {
+    font-size: 1.3rem;
+  }
+
+  .process-number {
+    background-color: #b08048;
+    padding: .3rem .7rem;
+    border-radius: 50%;
+    color: #f2f2f2;
+    align-self: flex-start;
+  }
+
+  .how-icon-box .icon-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .how-icon-box .right span,
+  .how-icon-box .right h4 {
+    align-self: flex-end;
+  }
+
+
+  /* .how-icon-box h4 {
+    font-weight: bolder;
+  } */
+
+  .how-icon-box .right p {
+    text-align: end;
+  }
+
   .services .icon-box {
     /* border: 2px solid red; */
     width: 100%;
