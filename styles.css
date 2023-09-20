@@ -982,14 +982,169 @@ a {
     gap: 1.5rem;
   }
 
-  .how-icon-box {
-    /* border: 2px solid black; */
+  .how-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding-block: 2rem;
+    padding: .5rem 2rem;
+    gap: 1rem;
+    /* border: 2px solid red; */
+  }
+
+  .how-list {
+    display: flex;
+    /* border: 2px solid blue; */
+    height: 300px;
+    width: 1000px;
+    padding: .2rem 1rem;
+    /* gap: 1rem; */
     position: relative;
   }
 
+  .how-icon-box {
+    /* border: 2px solid black; */
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem 1rem;
+    width: 300px;
+    height: 200px;
+  }
+
+  .icon-box-one {
+    position: absolute;
+    left: 10%;
+  }
+
+  .icon-box-two {
+    position: absolute;
+    left: 60%;
+    top: 100px;
+  }
+
+  .how-icon-box .icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .1rem;
+    align-self: flex-start;
+    font-size: 2rem;
+    color: #b08048;
+  }
+
+  /* .how-icon-box .icon-container .icon i {
+    position: relative;
+  } */
+
+  .how-icon-box .icon-content {
+    padding-top: 2rem;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+  }
+
+  .how-icon-box .icon-content p {
+    font-family: "Raleway", sans-serif;
+  }
+
+  .how-icon-box .icon-container .process-number {
+    transform: rotate(270deg);
+  }
+
+  .how-icon-box h4 {
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+
+  .how-cta {
+    /* border: 2px solid red; */
+    height: 700px;
+    padding: 1rem;
+    display: flex;
+
+    position: relative;
+    z-index: 1;
+  }
+
+  .how-cta::after {
+    content: '';
+    height: 85%;
+    width: 100%;
+    top: 15%;
+    left: 0;
+    background-color: #dfbc95;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .how-cta > * {
+    flex-basis: 100%;
+  }
+
+  .cta-image {
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .cta-image img {
+    display: block;
+    width: 400px;
+    height: 550px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .white {
+    color: white;
+  }
+
+  .cta-content {
+    /* border: 2px solid black; */
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: .5rem;
+    /* gap: 1rem; */
+    /* position: relative; */
+  }
+
+  .cta-content h4 {
+    /* border: 2px solid black; */
+    font-size: 2rem;
+    position: relative;
+    left: -10%;
+    top: 15%;
+  }
+
+  .cta-content p {
+    padding-left: 3rem;
+    margin-block: 1rem;
+    width: 60%;
+    position: relative;
+    top: 15%;
+    /* border: 2px solid black; */
+    font-size: 1.1rem;
+  }
+
+  .cta-content .cta-btn {
+    position: relative;
+    top: 15%;
+    padding: 1rem 3rem;
+  }
+
+  .cta-content a {
+    align-self: flex-start;
+    background-color: #151915;
+    color: #fff;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+  }
+
+
+/* 
     .how-icon-box::after {
       content: '';
       height: 100%;
@@ -1038,16 +1193,16 @@ a {
   .how-icon-box .right span,
   .how-icon-box .right h4 {
     align-self: flex-end;
-  }
+  } */
 
 
   /* .how-icon-box h4 {
     font-weight: bolder;
   } */
 
-  .how-icon-box .right p {
+  /* .how-icon-box .right p {
     text-align: end;
-  }
+  } */
 
   .services .icon-box {
     /* border: 2px solid red; */
@@ -2040,7 +2195,8 @@ a {
   }
   .products-container {
     font-family: "Raleway", sans-serif;
-    background: linear-gradient(90deg, #90A9B7, rgba(0, 0, 0, 0.2));
+    /* background-color: #000000; */
+    background: linear-gradient(90deg, #b08048, rgba(0, 0, 0, 0.2));
     /* border: 2px solid blue; */
     padding: 2rem .5rem;
     text-align: center;
