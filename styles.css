@@ -352,7 +352,7 @@ a {
     justify-content: space-between;
     padding: 8px 16px;
     margin-left: 10px;
-    font-family: "Raleway", sans-serif;
+    /* font-family: "Raleway", sans-serif; */
     font-size: 14px;
     color: #fff;
     white-space: nowrap;
@@ -362,7 +362,7 @@ a {
   
   .navbar a i,
   .navbar a:focus i {
-    font-size: 12px;
+    font-size: 10px;
     line-height: 0;
     margin-left: 5px;
   }
@@ -577,7 +577,7 @@ a {
   }
   
   #hero h1 {
-    margin: 0 0 10px 0;
+    margin: 150px 0 10px 0;
     font-size: 46px;
     line-height: 3rem;
     font-weight: bolder;
@@ -867,7 +867,7 @@ a {
   # About
   --------------------------------------------------------------*/
   .about {
-    margin-block: 100px;
+    margin-bottom: 70px;
     text-align: center;
   }
   
@@ -887,12 +887,19 @@ a {
   }
   
   .about-header h2,
-  .products-header h2 {
+  .products-header h2,
+  .how-header h2,
+  .farmer-header h2,
+  .joincontainer-header h2 {
+    font-size: 1.8rem;
     font-weight: bold;
     position: relative;
   } 
   .about-header h2::after,
-  .products-header h2::after {
+  .products-header h2::after,
+  .how-header h2::after,
+  .farmer-header h2::after,
+  .joincontainer-header h2::after {
     content: '';
     width: 5%;
     height: 3px;
@@ -941,12 +948,13 @@ a {
 
 
   .about .icon-boxes .icon-box h4 {
-    font-size: 1.7rem;
+    padding-top: 1rem;
+    font-size: 1.4rem;
   }
 
   .about .icon-boxes .icon-box p {
     padding-top: 6rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .box-one {
@@ -979,7 +987,12 @@ a {
   .how-container {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    /* border: 2px solid #ff0000; */
+    /* gap: 1.5rem; */
+  }
+
+  .how-container h2 {
+    margin-bottom: 0;
   }
 
   .how-content {
@@ -987,7 +1000,6 @@ a {
     flex-direction: column;
     align-items: center;
     padding: .5rem 2rem;
-    gap: 1rem;
     /* border: 2px solid red; */
   }
 
@@ -1050,6 +1062,7 @@ a {
 
   .how-icon-box .icon-container .process-number {
     transform: rotate(270deg);
+    font-weight: bold;
   }
 
   .how-icon-box h4 {
@@ -1126,7 +1139,7 @@ a {
     position: relative;
     top: 15%;
     /* border: 2px solid black; */
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .cta-content .cta-btn {
@@ -1140,481 +1153,144 @@ a {
     background-color: #151915;
     color: #fff;
     padding: .5rem 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
 
-/* 
-    .how-icon-box::after {
-      content: '';
-      height: 100%;
-      width: 2px;
-      top: 0;
-      left: 50%;
-      background-color: #b08048;
-      position: absolute;
-    }
-
-  .how-icon-box > * {
-    flex-basis: 100%;
-    padding-inline: 2rem;
-  }
-  
-  .how-icon-box i {
-    font-size: 5rem;
-    float: right;
-    color: #b08048;
+  /* FARMERS SECTION */
+  .farmers-container {
+    /* text-align: center; */
+    /* border: 2px solid blue; */
+    padding: .5rem;
+    text-align: center;
   }
 
-  .how-icon-box i.left {
-    float: left;
-  }
-
-  .how-icon-box span,
-  .how-icon-box h4,
-  .how-icon-box p {
-    font-size: 1.3rem;
-  }
-
-  .process-number {
-    background-color: #b08048;
-    padding: .3rem .7rem;
-    border-radius: 50%;
-    color: #f2f2f2;
-    align-self: flex-start;
-  }
-
-  .how-icon-box .icon-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-  }
-
-  .how-icon-box .right span,
-  .how-icon-box .right h4 {
-    align-self: flex-end;
-  } */
-
-
-  /* .how-icon-box h4 {
-    font-weight: bolder;
-  } */
-
-  /* .how-icon-box .right p {
-    text-align: end;
-  } */
-
-  .services .icon-box {
-    /* border: 2px solid red; */
-    width: 100%;
-    padding: 1rem .5rem;
-    position: relative;
-    overflow: hidden;
-    background-color: #d3d3d3;
-    box-shadow: 0 0 29px 0 #f4f4f4;
-    transition: all 0.3s ease-in-out;
-    border-radius: 8px;
-    z-index: 1;
-  
-    /* display: flex;
-    flex-direction: column;
-    gap: 1rem; */
-  }
-  
-  .services .icon-box::before {
-    content: "";
-    position: absolute;
-    background: white;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    top: 100%;
-    transition: all 0.3s;
-    z-index: -1;
-  }
-  
-  .services .icon-box:hover::before {
-    background: #151915;
-    top: 0;
-    border-radius: 0px;
-  }
-  
-  .services .icon {
-    margin-bottom: 20px;
-  }
-  
-  .services .icon i {
-    font-size: 6rem;
-    line-height: 1;
-    color: #000000bf;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .services .process-number {
+  .farmers-container > * {
     /* border: 2px solid black; */
-    color: #000000bf;
-    font-size: 3.5rem;
-    font-weight: 200;
-    position: absolute;
-    top: 75px;
-    left: 10px;
+    margin-block: 1rem;
   }
-  
-  .services .title {
-    font-weight: 700;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    font-size: 20px;
+
+  .farmer-list {
+    /* border: 2px solid red; */
+    display: grid;
+    max-width: 1000px;
+    margin: auto;
+    grid-template-areas: "farmer-one farmer-one   farmer-four farmer-five"
+                         "farmer-two farmer-three farmer-four farmer-six";
+    grid-template-rows: 250px 250px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px 10px;                         
   }
-  
-  .services .title a {
-    color: #111;
-  }
-  
-  .services .description {
-    font-size: .9rem;
-    line-height: 1.5rem;
-    margin-bottom: 0;
-    font-family: "Raleway", sans-serif;
-  }
-  
-  .services .icon-box:hover .title a,
-  .services .icon-box:hover .description,
-  .services .icon-box:hover .icon i,
-  .services .icon-box:hover .process-number {
-    color: #fff;
-  }
-  
-  @media (min-width: 992px) {
-    .section-title p {
-      font-size: 1.1rem;
-    }
-    .services .container .row {
-      /* border: 2px solid black; */
-      --bs-gutter-x: .5rem;
-    }
-    .services .icon-box {
-      margin-inline: 0;
-    }
-    /* .services .section-title p {
-      font-size: 1.2rem;
-    } */
-  }
-  
-  
-  /*--------------------------------------------------------------
-  # Cta
-  --------------------------------------------------------------*/
-  .cta {
-    height: 400px;
-    margin-block: 150px;
-    background: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.6)), url("../../assets/img/cta-bg2.jpg") fixed center center;
-    background-size: cover;
-    padding: 60px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .cta .text-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.3rem;
-  }
-  
-  .cta h3 {
-    color: #fff;
-    font-size: 28px;
-    font-weight: 700;
-  }
-  
-  .cta p {
-    color: #fff;
-  }
-  
-  .cta .text-center a {
+
+  /* .farmer-list > * {
     border: 2px solid black;
-    font-family: "Raleway", sans-serif;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-    text-align: center;
-    background-color: #9afa8a;
-    color: #000000;
-    text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: 1px;
-    padding: 8px 28px;
+  } */
+
+  .farmer-one {
+    grid-area: farmer-one;
+    background-image: url(https://img.freepik.com/free-photo/harvesting-wheat-tranquil-meadow-sunset-generated-by-ai_24640-80628.jpg?size=626&ext=jpg);
+  }
+
+  .farmer-two {
+    grid-area: farmer-two;
+    background-image: url(https://img.freepik.com/free-photo/tractor-agricultural-machine-cultivating-field_342744-896.jpg?size=626&ext=jpg);
+  }
+
+  .farmer-three {
+    grid-area: farmer-three;
+    background-image: url(https://img.freepik.com/free-photo/strawberry-field_74190-4881.jpg?size=626&ext=jpg);
+  }
+
+  .farmer-four {
+    grid-area: farmer-four;
+    background-image: url(https://img.freepik.com/free-photo/aerial-shot-rice-terrace-sunlight-evening-gianyar-bali-indonesia_181624-60419.jpg?size=626&ext=jpg);
+  }
+
+  .farmer-five {
+    grid-area: farmer-five;
+    background-image: url(https://img.freepik.com/free-photo/high-angle-farmland-view_23-2148579680.jpg?size=626&ext=jpg);
+  }
+
+  .farmer-six {
+    grid-area: farmer-six;
+    background-image: url(https://img.freepik.com/free-photo/sunny-meadow-landscape_1112-134.jpg?size=626&ext=jpg);
   }
   
-  .cta .text-center a:hover {
-    background-color: #000000;
-    color: #fff;
-    border: 2px solid #fff;
-  }
-  
-  @media (max-width: 425px) {
-    .cta .text-center {
-      gap: .5rem;
-    }
-    .cta p {
-      font-size: .9rem;
-      line-height: 1rem;
-    }
-  }
-  
-  
-  /*--------------------------------------------------------------
-  # Portfolio
-  --------------------------------------------------------------*/
-  .portfolio {
-    text-align: center;
-  }
-  
-  .meet-header {
+  .farmer {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .portfolio .portfolio-item {
-    margin-bottom: 30px;
-  }
-  
-  .portfolio #portfolio-flters {
-    padding: 0;
-    margin: 0 auto 35px auto;
-    list-style: none;
-    text-align: center;
-    background: #ecf5f9;
-    border-radius: 50px;
-    padding: 2px 15px;
-  }
-  
-  .portfolio #portfolio-flters li {
-    cursor: pointer;
-    display: inline-block;
-    padding: 10px 15px 8px 15px;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1;
-    text-transform: uppercase;
-    color: #2f4d5a;
-    margin-bottom: 5px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .portfolio #portfolio-flters li:hover,
-  .portfolio #portfolio-flters li.filter-active {
-    color: #67b0d1;
-  }
-  
-  .portfolio #portfolio-flters li:last-child {
-    margin-right: 0;
-  }
-  
-  .portfolio .portfolio-wrap {
-    /* border: 2px solid black; */
-    height: 300px;
-    transition: 0.3s;
+    align-items: flex-end;
+    background-position: center;
+    background-size: cover;
+    border-radius: .5rem;
+
     position: relative;
-    overflow: hidden;
     z-index: 1;
+    color: #fff;
   }
-  
-  .portfolio .portfolio-wrap::before {
-    content: "";
-    background: rgba(0, 0, 0, 0.705);
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    transition: all ease-in-out 0.3s;
-    z-index: 2;
-    opacity: .5;
-  }
-  
-  .portfolio .portfolio-wrap img {
-    /* border: 2px solid red; */
+
+  .farmer::after {
+    content: '';
     height: 100%;
     width: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-  
-  .portfolio .portfolio-wrap .factory-name {
-    position: absolute;
-    z-index: 5;
-    /* opacity: 1; */
-    color: white;
-    left: 25%;
-    font-weight: bold;
-    top: 45%;
-  }
-  
-  .portfolio .portfolio-wrap .portfolio-links {
-    opacity: 1;
-    left: 0;
-    right: 0;
-    bottom: -60px;
-    z-index: 3;
-    position: absolute;
-    transition: all ease-in-out 0.3s;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .portfolio .portfolio-wrap .portfolio-links a {
-    color: #000000;
-    font-size: 28px;
-    text-align: center;
-    background: #18d26e;
-    transition: 0.3s;
-    width: 50%;
-  }
-  
-  .portfolio .portfolio-wrap .portfolio-links a:hover {
-    background: #0e580e;
-    color: #fff;
-  }
-  
-  .portfolio .portfolio-wrap .portfolio-links a+a {
-    border-left: 1px solid #fff;
-  }
-  
-  .portfolio .portfolio-wrap:hover::before {
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 1;
-  }
-  
-  .portfolio .portfolio-wrap:hover .portfolio-links {
-    opacity: 1;
-    bottom: 0;
-  }
-  
-  
-  .portfolio .view-more a {
-    border: 2px solid #fff;
-    font-family: "Raleway", sans-serif;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-    text-align: center;
     background-color: #000000;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: 1px;
-    padding: 8px 28px;
+    position: absolute;
+    opacity: .3;
+    z-index: -1;
+
+    border-radius: .5rem;
   }
-  
-  .portfolio .view-more a:hover {
-    background-color: #9afa8a;
+
+  .farmer-header p {
+    width: 70%;
+    margin-inline: auto;
+  }
+
+  .farmer p {
+    padding: .5rem;
+  }
+
+  .farmers-container .view-more {
+    margin-top: 4rem;
+  }
+
+  .farmers-container .view-more a {
+    font-family: "Raleway", sans-serif;
+    width: fit-content;
+    font-weight: 600;
+    background-color: #b08048;
+    padding: .5rem 1rem;
     color: #000000;
-    border: 2px solid #000000;
   }
-  /*--------------------------------------------------------------
-  # Portfolio Details
-  --------------------------------------------------------------*/
-  .portfolio-details {
-    padding-top: 40px;
-  }
-  
-  .portfolio-details .portfolio-details-slider img {
-    width: 100%;
-  }
-  
-  .portfolio-details .portfolio-details-slider .swiper-pagination {
-    margin-top: 20px;
-    position: relative;
-  }
-  
-  .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background-color: #fff;
-    opacity: 1;
-    border: 1px solid #67b0d1;
-  }
-  
-  .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: #67b0d1;
-  }
-  
-  .portfolio-details .portfolio-info {
-    padding: 30px;
-    box-shadow: 0px 0 30px rgba(47, 77, 90, 0.08);
-  }
-  
-  .portfolio-details .portfolio-info h3 {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .portfolio-details .portfolio-info ul {
-    list-style: none;
-    padding: 0;
-    font-size: 15px;
-  }
-  
-  .portfolio-details .portfolio-info ul li+li {
-    margin-top: 10px;
-  }
-  
-  .portfolio-details .portfolio-description {
-    padding-top: 30px;
-  }
-  
-  .portfolio-details .portfolio-description h2 {
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  
-  .portfolio-details .portfolio-description p {
-    padding: 0;
-  }
-  
-  
-  
+
+
+
+
   /* JOIN OUR MOVEMENT SECTION */
   .join-container {
   display: flex;
   flex-direction: column;
-  margin-block: 150px;
-  gap: 3rem;
+  margin-block: 90px;
+  /* gap: 2rem; */
   /* height: fit-content; */
   }
   
-  .joincontainer-header {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .join-container .section-title p {
-  width: 80%;
-  margin: auto;
-  }
   .joincontainer-content {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
   }
+
   .joincontainer-content > * {
   /* border: 2px solid blue; */
   width: 100%;
   }
+
   .join-card {
   color: #f1ece9;
   height: 360px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
   
   display: flex;
   flex-direction: column;
@@ -1624,12 +1300,13 @@ a {
   padding-block: 2rem;
   
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   
   z-index: 1;
   position: relative;
   }
+
   .join-card::after {
   content: '';
   height: 100%;
@@ -1641,18 +1318,22 @@ a {
   z-index: -1;
   position: absolute;
   }
+
   .join-header h2 {
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   font-size: 1.6rem;
   }
+
   .join-subheader {
   font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
   }
+
   .join-content {
   padding-bottom: 2rem;
   }
+  
   .join-content p {
   /* margin: auto; */
   /* box-sizing: border-box; */
@@ -1660,8 +1341,9 @@ a {
   /* font-weight: bold; */
   font-family: 'Raleway', sans-serif;
   font-size: 1.1rem;
-  line-height: .3rem;
+  line-height: 1rem;
   }
+
   .join-btn {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
@@ -1673,19 +1355,21 @@ a {
   border: 2px solid #000000;
   transition: all 300ms ease-in;
   }
+
   .join-btn:hover {
   background-color: #000000;
   color: #fff;
   border-color: #fff;
   }
+
   .love-coffee {
-  background-image: url("../../assets/img/movement/coffee.webp");
+  background-image: url("https://img.freepik.com/free-vector/hand-drawn-illustration-friends-with-hot-drinks_23-2149086127.jpg?size=626&ext=jpg");
   }
   .cafe {
-  background-image: url("../../assets/img/movement/coffee-house.webp");
+  background-image: url("https://img.freepik.com/free-vector/another-coffee-concept-illustration_114360-7750.jpg?size=626&ext=jpg");
   }
   .coffee-farm {
-  background-image: url("../../assets/img/movement/coffee-farm.webp");
+  background-image: url("https://img.freepik.com/free-vector/watercolor-background-world-coffee-day-celebration_23-2150723947.jpg?size=626&ext=jpg");
   }
   
   /* media queries */
