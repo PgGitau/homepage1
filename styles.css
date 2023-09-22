@@ -827,6 +827,10 @@ a {
     height: 150px;
   }
 
+    .count-flex {
+      display: flex;
+    }
+
   /* .counts {
     border: 2px solid red;
     height: 170px;
